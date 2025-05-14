@@ -1,7 +1,17 @@
 import Bio from '../components/Bio';
 import '../App.css';
+import {
+    FacebookShareButton,
+    TwitterShareButton,
+    LinkedinShareButton,
+    FacebookIcon,
+    TwitterIcon,
+    LinkedinIcon
+} from 'react-share';
 
 function Creators() {
+    const shareUrl = window.location.href;
+    const title = "Check this out!";
     const travisKalanick = {
         "name": "Travis Kalanick",
         "article": "https://lowercasecapital.com/2015/02/04/why-i-would-never-want-to-compete-with-travis-kalanick/",
@@ -17,15 +27,30 @@ function Creators() {
     }
 
     return (
-        <>
-            <h2>Creators</h2>
-            <p>Here's the world-changers, the shakers and makers who are 
-                putting something out into the world, who are building things and 
-                creating the world they can see in their head.
-            </p>
+        <main>
+            <div className="description-box">
+                <h2>Creators</h2>
+                <p className="description">Here's the world-changers, the shakers and makers who are 
+                    putting something out into the world, who are building things and 
+                    creating the world they can see in their head.
+                </p>
+            </div>
             <Bio {...travisKalanick} />
             <Bio {...mrBeast} />
-        </>
+            <div className="share-buttons">
+                <FacebookShareButton url={shareUrl} quote={title}>
+                    <FacebookIcon size={32} round />
+                </FacebookShareButton>
+
+                <TwitterShareButton url={shareUrl} title={title}>
+                    <TwitterIcon size={32} round />
+                </TwitterShareButton>
+
+                <LinkedinShareButton url={shareUrl} title={title}>
+                    <LinkedinIcon size={32} round />
+                </LinkedinShareButton>
+            </div>
+        </main>
     );
 }
 

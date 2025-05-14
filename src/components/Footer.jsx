@@ -14,7 +14,7 @@ function Footer() {
                 <div className="footer-right">
                     <div className="footer-column">
                         <ul>
-                            <li>Resources</li>
+                            <li className="title">Resources</li>
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>Vite</li>
@@ -25,7 +25,7 @@ function Footer() {
                     </div>
                     <div className="footer-column">
                         <ul>
-                            <li>Learn More</li>
+                            <li className="title">Learn More</li>
                             <li>My Site</li>
                             <li>Food Project</li>
                             <li>Silicon Slopes</li>

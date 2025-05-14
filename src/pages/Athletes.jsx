@@ -1,7 +1,17 @@
 import Bio from '../components/Bio';
 import '../App.css';
+import {
+    FacebookShareButton,
+    TwitterShareButton,
+    LinkedinShareButton,
+    FacebookIcon,
+    TwitterIcon,
+    LinkedinIcon
+} from 'react-share';
 
 function Athletes() {
+    const shareUrl = window.location.href;
+    const title = "Check this out!";
     const kobeBryant = {
         "name": "Kobe Bryant",
         "article": "https://vault.si.com/vault/2014/08/25/twilight-the-saga",
@@ -10,15 +20,30 @@ function Athletes() {
     }
 
     return (
-        <>
-            <h2>Athletes</h2>
-            <p>Here's the icons, the people the world sees on perhaps the biggest stages.
-                Everyone as a child has dreamed of hundreds of thousands to millions of fans
-                screaming their name as they perform in front of the world. These are the people
-                who actually made that dream happen.
-            </p>
+        <main>
+            <div className="description-box">
+                <h2>Athletes</h2>
+                <p className="description">Here's the icons, the people the world sees on perhaps the biggest stages.
+                    Everyone as a child has dreamed of hundreds of thousands to millions of fans
+                    screaming their name as they perform in front of the world. These are the people
+                    who actually made that dream happen.
+                </p>
+            </div>
             <Bio {...kobeBryant} />
-        </>
+            <div className="share-buttons">
+                <FacebookShareButton url={shareUrl} quote={title}>
+                    <FacebookIcon size={32} round />
+                </FacebookShareButton>
+
+                <TwitterShareButton url={shareUrl} title={title}>
+                    <TwitterIcon size={32} round />
+                </TwitterShareButton>
+
+                <LinkedinShareButton url={shareUrl} title={title}>
+                    <LinkedinIcon size={32} round />
+                </LinkedinShareButton>
+            </div>
+        </main>
     );
 }
 

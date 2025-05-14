@@ -14,16 +14,16 @@ function Header() {
 
                 <div className="header-right">
                     <nav>
-                        <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>
+                        <NavLink to="/icons/" end className={({ isActive }) => isActive ? 'active' : ''}>
                             Home
                         </NavLink>
-                        <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>
+                        <NavLink to="/icons/about" className={({ isActive }) => isActive ? 'active' : ''}>
                             About
                         </NavLink>
-                        <NavLink to="/creators" className={({ isActive }) => isActive ? 'active' : ''}>
+                        <NavLink to="/icons/creators" className={({ isActive }) => isActive ? 'active' : ''}>
                             Creators
                         </NavLink>
-                        <NavLink to="/athletes" className={({ isActive }) => isActive ? 'active' : ''}>
+                        <NavLink to="/icons/athletes" className={({ isActive }) => isActive ? 'active' : ''}>
                             Athletes
                         </NavLink>
                     </nav>
