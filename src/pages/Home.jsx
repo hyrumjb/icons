@@ -28,7 +28,7 @@ function Home() {
                 <p>This spans a wide range of fields—including politics, entertainment, science, activism, and business—and features those who are shaping the future.</p>
             </div>
             <div className="home-box left">
-                <p>Heroes, giants, titans, luminaries, pioneers, greats, trailblazers, masters, hall-of-famers . . .</p>                
+                <p>Heroes, giants, titans, luminaries, pioneers, greats, trailblazers, masters, and hall-of-famers.</p>                
                 <img src={girlImg} alt="Spanx founder" className="main-image" />
             </div>
             <div className="home-box right">

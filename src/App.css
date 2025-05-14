@@ -22,6 +22,23 @@ body {
   color: var(--text-light);
 }
 
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.dark header {
+  background-color: var(--bg-dark);
+}
+
+body.dark nav a.active {
+  color: var(--text-dark);
+}
+
+body.dark .title {
+  color: var(--text-dark);
+}
+
 h1,
 h2,
 h3, 
@@ -93,6 +110,42 @@ h2 {
   padding: 20px;
 }
 
+.bio-box {
+  display: flex;
+  flex-direction: column;
+  border: 6px solid var(--my-purple);
+  border-radius: 25px;
+  margin: 10px;
+  align-items: center;
+}
+
+.bio-box h3 {
+  padding: 20px;
+  font-size: 28px;
+}
+
+.bio-box a {
+  padding: 0 0 25px;
+}
+
+.bio-box p {
+  line-height: 1.4;
+  padding: 0 30px 20px;
+}
+
+.likes {
+  display: flex;
+  margin: 10px 0;
+}
+
+.likes p {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  font-size: 20px;
+  color: var(--my-grey);
+}
+
 .home-box {
   display: flex;
   border: 6px solid var(--my-purple);
@@ -104,7 +157,7 @@ h2 {
 
 .home-box p {
   padding: 20px;
-  line-height: 1.25;
+  line-height: 1.4;
   color: var(--my-grey);
   font-size: 18px;
   border: 0.5px solid var(--my-purple-fade);
@@ -114,8 +167,8 @@ h2 {
   border: 6px solid var(--my-purple);
   border-radius: 25px;
   margin: 10px;
-  padding: 20px;
-  line-height: 1.25;
+  padding: 30px;
+  line-height: 1.4;
 }
 
 .share-buttons {
@@ -172,6 +225,7 @@ main {
   height: 40px;
   width: 40px;
   color: var(--my-grey);
+  cursor: pointer;
 }
 
 .logo {
@@ -199,7 +253,7 @@ main {
 }
 
 .title {
-  color: black;
+  color: var(--text-light);
 }
 
 .thumb {
@@ -210,5 +264,24 @@ main {
 @media (min-width: 1000px) {
   footer {
     padding: 0 10vw;
+  }
+}
+
+@media (max-width: 800px) {
+  iframe {
+    width: 70vw;
+  }
+
+  .home-box {
+    flex-direction: column;
+  }
+
+  .home-box.left {
+    flex-direction: column-reverse;
+  }
+
+  .home-box img {
+    width: 70vw;
+    height: auto;
   }
 }
